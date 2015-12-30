@@ -13,7 +13,7 @@ install:
 script:
   - echo $TRAVIS_PYTHON_VERSION
   - python setup.py install > /dev/null
-  - supybot-test -v --no-network --disable-multiprocessing plugins/News plugins/MessageParser plugins/QuoteGrabs plugins/Alias plugins/Aka
+  - supybot-test -v --no-network --disable-multiprocessing plugins/Aka
 notifications:
     email: false
 matrix:
