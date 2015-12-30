@@ -13,7 +13,7 @@ install:
 script:
   - echo $TRAVIS_PYTHON_VERSION
   - python setup.py install > /dev/null
-  - supybot-test test -v --plugins-dir=./plugins/ --no-network --disable-multiprocessing --exclude=./plugins/Scheduler --exclude=./plugins/Filter
+  - supybot-test -v --no-network --disable-multiprocessing plugins/Web plugins/Network plugins/Lart plugins/Note plugins/Factoids plugins/Reply plugins/Config plugins/ChannelStats plugins/Status plugins/String plugins/Format plugins/MoobotFactoids plugins/NickAuth plugins/Utilities plugins/Channel plugins/Anonymous test plugins/News plugins/MessageParser plugins/Later plugins/BadWords plugins/Plugin plugins/Admin plugins/Dunno plugins/GPG plugins/URL plugins/QuoteGrabs plugins/Alias plugins/Games plugins/Karma plugins/Praise plugins/Time plugins/Aka
 notifications:
     email: false
 matrix:
