@@ -13,6 +13,7 @@ install:
 script:
   - echo $TRAVIS_PYTHON_VERSION
   - python setup.py install > /dev/null
+  - export PYTHONPATH=./debug/
   - supybot-test -v --no-network --disable-multiprocessing plugins/Aka
   - cat test-logs/messages.log
 notifications:
